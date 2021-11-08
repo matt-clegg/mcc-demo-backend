@@ -37,9 +37,9 @@ jobs:
       
     - name: Create env file
       uses: finnp/create-file-action@master
-        env:
-          FILE_NAME: ".env"
-          FILE_DATA: "DB_CLIENT=sqlite3\nDB_FILENAME=data.db"
+      env:
+        FILE_NAME: ".env"
+        FILE_DATA: "DB_CLIENT=sqlite3\nDB_FILENAME=data.db"
           
     - name: "Bootstrap Directus"
       run: npm run bootstrap
