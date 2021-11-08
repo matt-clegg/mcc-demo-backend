@@ -36,10 +36,9 @@ jobs:
       run: npm ci --prefer-offline --no-audit
       
     - name: Create env file
-      uses: finnp/create-file-action@master
-      env:
-        FILE_NAME: ".env"
-        FILE_DATA: "DB_CLIENT=sqlite3\nDB_FILENAME=data.db"
+      run: |
+        echo DB_CLIENT=sqlite3 > .env
+        echo DB_FILENAME=data.db >> .env
           
-    - name: "Bootstrap Directus"
+    - name: Bootstrap Directus
       run: npm run bootstrap
