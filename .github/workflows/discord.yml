@@ -1,10 +1,10 @@
 name: Discord notifications
 
+
 on:
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    branches: 
+      - master
 
 jobs:
   notify_discord:
